@@ -5,9 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "node index.js",
-    "build": "npm install --include=dev --unsafe-perm",
-    "postinstall": "npm rebuild bcrypt --unsafe-perm"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
