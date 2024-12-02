@@ -1,5 +1,6 @@
 import express from 'express';
 import morgan from "morgan";
+import cors from "cors"
 import rateLimit from "express-rate-limit";
 import xssClean from "xss-clean";
 import mongoSanitize from "express-mongo-sanitize";
@@ -18,6 +19,7 @@ if (process.env.NODE_ENV === "development") {
 
 
 app.use(morgan("dev"));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
