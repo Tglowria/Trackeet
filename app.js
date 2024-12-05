@@ -12,14 +12,15 @@ import expenseRouter from './routes/expense.routes.js';
 import budgetRouter from './routes/budget.routes.js';
 
 const app = express();
+app.use(cors());
+app.options('*', cors())
 
 if (process.env.NODE_ENV === "development") {
     app.use(morgan('dev'));
   }
 
 
-app.use(morgan("dev"));
-app.use(cors());
+app.use(morgan("dev"))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
